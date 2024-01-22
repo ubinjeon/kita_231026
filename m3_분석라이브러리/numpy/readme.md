@@ -1,4 +1,4 @@
-## NumPy 기초
+# NumPy 기초
 - 기본 데이터 타입은 ndarray. ndarray
 - 배열 생성 및 조작
   - np.array(): 리스트나 튜플로부터 배열 생성
@@ -41,3 +41,20 @@
 - np.random.randn      # 가우시안 표준 정규 분포에서 난수 매트릭스 array 생성
 - np.random.shuffle    # 기존의 데이터의 순서 바꾸기
 - np.random.choice     # 기존의 데이터에서 sampling
+
+# 선형대수
+arr = np.array([[1,2],[3,4]])
+- 역렬
+arr_inv = np.linalg.inv(arr)
+np.dot(arr,arr_inv)
+np.matmul(arr,arr_inv)
+- 정방행렬: Square matrix nxn
+a = np.full((2,2),7)
+- 대각행렬: Diagonal matrix
+np.diag([1,2,3])
+- 상삼각행렬: np.triu(np.ones((3,3)))
+- 하삼각행렬: np.tril(np.ones((3,3)))
+- 항등행렬: identity matrix
+np.identity(3)
+- 행렬식: 선형 종속성 판단. 다중공선성 문제를 확인하는데 유용
+determinant_A = np.linalg.det(A)
