@@ -1,6 +1,5 @@
 ## NumPy 기초
 - 기본 데이터 타입은 ndarray. ndarray
-- 
 - 배열 생성 및 조작
   - np.array(): 리스트나 튜플로부터 배열 생성
   - np.arange(): 연속된 값으로 배열 생성
