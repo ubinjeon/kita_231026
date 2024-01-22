@@ -1,7 +1,6 @@
 ## NumPy 기초
-- NumPy는 과학 계산을 위한 Python 라이브러리, 다차원 배열 객체인 ndarry를 중심으로 작동
-- 파이썬  리스트와 넘파이 배열의 주요 차이점
-  - 
+- 기본 데이터 타입은 ndarray. ndarray
+- 
 - 배열 생성 및 조작
   - np.array(): 리스트나 튜플로부터 배열 생성
   - np.arange(): 연속된 값으로 배열 생성
@@ -10,3 +9,36 @@
 - NumPy의 수학적 연산
 - 부울 인덱싱 및 팬시 인덱싱
 - 파일 입출력
+
+## 코드 예제
+- import numpy as np
+- np.sqrt(array)
+- np.arange(10)
+- np.array([1,2,3])
+- print(data.shape) # 크기
+- print(data.dtype) # 자료형
+- print(data.ndim)  # 차원
+- a = np.arange(10).reshape(2,5)
+- zeros, ones, full, eye
+  - z = np.zeros_like(a)
+  - o = np.ones_like(a)
+  - f = np.full_like(a,5)
+- array.tolist()
+- type(array)
+- array6_concat = np.concatenate((array6_1, array6_2),axis=1)
+- split1,split2,split3 = np.split(array8,3)
+- a_t = np.transpose(a,(1,2,0))
+- arr_sw = np.swapaxes(arr,0,1)
+- np.where(arr > 0, 2, arr) # 양수이면 2 아니면 그냥 arr 숫자 그대로
+- arr.sort(0) array에 바로 반영하는 거라서, 그다음에 array를 프린트를 해야한다.
+- arr.sort(1)
+- np.percentile(large_arr,5)
+- array_9[1::2,::2] = 1 # 홀수 행의 짝수열
+- array_9[::2,1::2] = 1 # 짝수 행의 홀수열
+- z = np.tile(np.array([[0,1],[1,0]]),(4,4)) # [[0,1],[1,0]] 행과 열로 4번씩 반복해서 만들기
+- np.random.seed       # seed를 통한 난수 생성
+- np.random.randint    # 균일분포의 정수 난수 1개 생성
+- np.random.rand       # 0부터 1사이의 균일분포에서 난수 매트릭스 array 생성
+- np.random.randn      # 가우시안 표준 정규 분포에서 난수 매트릭스 array 생성
+- np.random.shuffle    # 기존의 데이터의 순서 바꾸기
+- np.random.choice     # 기존의 데이터에서 sampling
